@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph untuk Tampilan Kartu di Facebook -->
+    <meta property="og:title" content="Exclusive Content..!" />
+    <meta property="og:description" content="Cek kontent exclusive Keumala di sini" />
+    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjubMmITTVnPzMX0at-SgR3Yab-8IIH_7MmArxMsD9hZHqJYHozrefBbHaloUVq4u4W6VKrGSiVC6VlV3436kppoXDZr6ikb4cviGE1nTGBYgrOfUDSeacJT-zHLREJhXWY6yM524DM9zvywp8Fts7QI_Tu-h4xV_OmP3mJGM8CqMaP7H8mUz2PNTMs2RaP/s1905/avatar.jpg" />
+    <meta property="og:url" content="https://www.facebook.com" />
+    <meta property="og:type" content="article" />
+    
+    <title>Loading Offer...</title>
+
+    <script>
+        // 1. Kumpulan Link Affiliate untuk Dirandomisasi
+        const affiliateLinks = [
+            "https://s.shopee.co.id/AUs6Hj2ARo",
+            "https://s.shopee.co.id/5At6mYA6PF",
+            "https://s.shopee.co.id/2gBlnvKltl"
+        ];
+
+        // Pilih link afiliasi secara acak
+        const randomAffiliate = affiliateLinks[Math.floor(Math.random() * affiliateLinks.length)];
+
+        // 2. Filter User-Agent (Penting untuk keamanan)
+        // Bot Facebook (facebookexternalhit) tidak boleh diarahkan (redirect), 
+        // agar mereka hanya merayapi (crawl) meta tag OG di atas.
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        const isBot = /facebookexternalhit|Facebot|Twitterbot|Pinterest/i.test(userAgent);
+
+        // 3. Eksekusi Redirect untuk User Asli
+        if (!isBot) {
+            // Gunakan location.replace agar user tidak bisa 'Back' ke halaman kosong ini
+            window.location.replace(randomAffiliate);
+        }
+    </script>
+</head>
+<body style="background-color: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; font-family: Arial, sans-serif;">
+    
+    <!-- Konten statis ini hanya dilihat oleh bot atau sesaat oleh user dengan koneksi lambat -->
+    <div style="text-align: center; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+        <h2>Mengamankan tautan Anda...</h2>
+        <p>Anda akan dialihkan dalam hitungan detik.</p>
+    </div>
+
+</body>
+</html>
